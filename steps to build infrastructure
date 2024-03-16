@@ -1,0 +1,57 @@
+### Foundational Steps
+
+ 1. Creating a VPC
+
+  - In the AWS Management Console, navigate to VPC.
+  - Click on "Create VPC".
+  - Name your VPC and set the CIDR block to `10.10.0.0/16`.
+
+ 2. Creating Public Subnets
+
+  - Deploy three public subnets in different availability zones with CIDR blocks `10.10.1.0/24`, `10.10.2.0/24`, and `10.10.3.0/24`.
+
+ 3. Creating an Autoscaling Group
+
+  - Create a launch template with appropriate configurations, including installing Apache on each instance.
+  - Configure the launch template to use the public subnets created in step 2.
+  - Set the autoscaling group's minimum and maximum instances to 2 and 5 respectively.
+
+ 4. Configuring Application Load Balancer
+
+  - Create an Application Load Balancer to distribute traffic to the autoscaling group.
+  - Configure security groups to allow inbound HTTP traffic from the load balancer.
+
+### Deployment Steps
+
+ 1. Create a Launch Template
+
+  - In the EC2 dashboard, navigate to "Launch Templates".
+  - Create a launch template with the necessary configurations.
+
+ 2. Create an Autoscaling Group
+
+  - In the Auto Scaling dashboard, select "Create Auto Scaling Group".
+  - Name the group and select the launch template created earlier.
+  - Configure other settings as per project requirements.
+
+ 3. Monitor Instances
+
+  - Check if instances are up and running by navigating to EC2 -> Instances.
+  - Access instances via their Public IPv4 address and verify functionality.
+
+### Advanced Configuration
+
+ 1. Adding Dynamic Scaling Policy
+
+   - Navigate to EC2 -> Auto Scaling groups -> Select the group -> Go to Automatic scaling -> Create dynamic scaling policy.
+   - Set the target value to 50 for CPU utilization.
+
+ 2. Stress Testing
+
+   - SSH into one of the instances and install a stress utility.
+   - Generate CPU load using the stress tool to surpass 50% utilization and observe if scaling policy works.
+
+### Conclusion
+ 
+ By following these steps, you have successfully set up a scalable web application infrastructure on AWS. This infrastructure ensures high availability, fault tolerance, and security, allowing your application to handle any amount of traffic with ease.
+
