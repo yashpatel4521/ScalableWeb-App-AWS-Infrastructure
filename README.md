@@ -21,3 +21,6 @@ Customize the configurations according to your specific requirements.
 Deploy your web application and monitor its performance using the implemented autoscaling and load balancing features.
 Contributing
 Contributions to ScalableWebAppAWSInfrastructure are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request. Let's collaborate to make this project even better!
+
+![scalable app](https://github.com/yashpatel4521/ScalableWeb-App-AWS-Infrastructure/assets/155745623/31635f49-41e8-4797-bbcc-1d77e90ba50f)
+
